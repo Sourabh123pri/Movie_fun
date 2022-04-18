@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react"; 
+import {Routes, Route } from "react-router-dom";
+import Footer from './components/utility/Footer'
+import NavBar from './components/utility/NavBar'
+import PageNot from './components/utility/PageNot'
+import Home from "./components/pages/Home";
+import Movie from "./components/pages/Movie";
+import Tv from "./components/pages/Tv";
+import SingleMovieDetials from "./components/content/SingleMovieDetials";
 function App() {
+  const [storeId, setStoreId] = useState(null)
+  const [inputValue, setInputValue] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar setInputValue={setInputValue} inputValue={inputValue} />
+      <Routes>
+        <Route  exact path="/" element={<Home setStoreId={setStoreId} inputValue={inputValue} />} />
+        <Route  exact path="/movie" element={<Movie setStoreId={setStoreId}  inputValue={inputValue}/>} />
+        <Route  exact path="/tv" element={<Tv setStoreId={setStoreId}  inputValue={inputValue}/>} />
+        <Route   path="/single" element={<SingleMovieDetials storeId={storeId}  inputValue={inputValue}/>}/>
+        <Route   path="*" element={<PageNot />} />
+      </Routes>
+      <Footer/>
+    </>
   );
 }
 

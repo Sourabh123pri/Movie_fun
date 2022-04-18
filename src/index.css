@@ -1,13 +1,386 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100;1,500&family=Rubik+Wet+Paint&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik+Wet+Paint&display=swap');
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ----------------------------------NavBar section  */
+
+.nav {
+  font-family: "Rubik Wet Paint", cursive;
+  position: sticky;
+  top: 0px;
+  height: 8vh;
+  background-color: rgb(53, 52, 52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 1.2rem;
+  z-index: 100;
+}
+.nav .logo,
+.bar {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.NavBar {
+  font-family: "Rubik Wet Paint", cursive;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: black;
+  width: 15vw;
+  height: 100vh;
+  border-radius: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 100;
+}
+.NavBar ul {
+  margin: 2rem 0 2rem 1rem;
+}
+.NavBar ul li {
+  padding: 0.2rem 0.2rem;
+  font-size: 1.2rem;
+}
+.NavBar ul li input {
+  border: none;
+  outline: 0;
+  background-color: #aaaaaa87;
+  width: 10vw;
+  height: 4.5vh;
+  border-radius: 40px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+.NavBar ul li,
+a {
+  color: white;
+  transition: all 0.5s ease-out;
+}
+.NavBar ul li i:hover {
+  display: none;
+}
+/*  --------------------------Home section */
+.home,
+.movePage,
+.tvPage {
+  font-family: "Bitter", serif;
+  background-color: #aaaaaa87;
+  padding: 1rem 0;
+}
+.heading .trending_movies {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  margin: 0rem auto;
+  border-bottom: solid #aaaaaa87;
+  width: 50vw;
+}
+.catetgory {
+  width: 70%;
+  margin: 0.5rem auto;
+}
+.catetgory span {
+  border-radius: 35px;
+  background-color: #4f4d4d;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px 8px;
+  cursor: pointer;
+}
+.inputBox {
+  display: inline-block;
+}
+.inputBox span {
+  font-weight: 900;
+}
+.inputBox input {
+  border-radius: 30px;
+  outline: 0;
+  width: 50vw;
+  height: 6.3vh;
+  background-color: transparent;
+  border: 3px solid #71726a;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px 18px;
+}
+.inputBox .fa {
+  padding: 0;
+}
+/* --------------------------------Card */
+.card_group {
+  width: 95vw;
+  margin: 0rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.card_group .card {
+  cursor: pointer;
+  width: 27%;
+  background-color: #c1c1c1;
+  margin: 0.3rem auto;
+  padding: 12px 18px;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.1rem;
+  font-family: "Bitter", serif;
+  font-weight: 500;
+}
+.card_group .card:hover {
+  box-shadow: 0px 8px 19px 3px #4f4d4d;
+  background-color: #9e9e9e;
+  transform: scale(1.005);
+}
+.card_group .card img {
+  height: 65vh;
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.card_group .card img:hover {
+  transform: scale(1.005);
+  border-radius: 5px;
+}
+
+.card_group .card .movie_info {
+  display: flex;
+  justify-content: space-between;
+}
+.card_group .card .movie_name p {
+  font-size: 18px;
+}
+
+/* ---------------------------------single_movie_detials */
+.single_movie_detials a {
+  font-family: 'Inter', sans-serif;
+  color: black;
+}
+.single_movie_detials {
+  font-weight: 900;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  background-color: #57555540;
+}
+.single_movie_info h3 {
+  margin: 0.5rem;
+}
+.single_movie_info p {
+  margin-bottom: 0rem;
+  font-weight: 600;
+}
+
+.single_img_section img {
+  width: 77vw;
+  border-radius: 12px;
+}
+/* ------------------------------------- utility  */
+
+.pagination {
+  border-radius: 12px;
+}
+.fa {
+  padding-right: 6px;
+}
+
+.err {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #dc3545;
+}
+
+/* -------------------------------- Footer  */
+.footer {
+  position: relative;
+  bottom: 0;
+  background: #353434;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+.footer .logo {
+  font-family: "Rubik Wet Paint", cursive;
+  font-size: 2rem;
+  font-weight: 900;
+}
+/* ------------------------------------ notFond */
+.notFond {
+  height: 100vh;
+  width: 100vw;
+  background-color: #353434;
+  color: white;
+  position: fixed;
+  top: 0%;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  font-weight: 500;
+  font-family: "Rubik Wet Paint", cursive;
+}
+/*--------------------------------- loader  */
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  width: 150px;
+  height: 150px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #aca7a759;
+  border-radius: 50%;
+  border-top: 16px solid #6f7173;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------- media  */
+
+@media only screen and (max-width: 935px) {
+  .card_group {
+    width: 100%;
+  }
+  .card_group .card {
+    width: 30%;
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+  .card_group .card h3 {
+    font-size: 22px;
+  }
+  .single_movie_detials {
+    width: 90%;
+  }
+  .pagination {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 563px) {
+  .NavBar {
+    width: 50vw;
+  }
+  .home,
+  .movePage,
+  .tvPage {
+    padding: 0.5rem 0;
+  }
+  .card_group {
+    padding: 1rem 0;
+  }
+  .card_group .card {
+    width: 45%;
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+  .card_group .card h3 {
+    font-size: 22px;
+  }
+  .heading .trending_movies {
+    font-size: 2rem;
+    padding-top: 1rem;
+    width: 90vw;
+  }
+  .inputBox input {
+    width: 44vw;
+  }
+  .single_movie_detials {
+    width: 95%;
+  }
+  .pagination {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .catetgory {
+    width: 90vw;
+  }
+  .card_group {
+    padding: 1rem 0;
+  }
+  .card_group .card {
+    width: 85%;
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+  .card_group .card h3 {
+    font-size: 22px;
+  }
+  .heading .trending_movies {
+    font-size: 2rem;
+    padding-top: 1rem;
+    width: 90vw;
+  }
+  .inputBox input {
+    width: 90vw;
+  }
+  .search {
+    margin: 8px auto;
+  }
+  .single_movie_detials {
+    width: 95%;
+  }
+  .single_img_section img {
+    width: 87vw;
+    height: 30vh;
+  }
+  .single_movie_info h3 {
+    font-size: 22px;
+  }
+  .single_movie_info p {
+    font-size: 12px;
+  }
+  .pagination {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
