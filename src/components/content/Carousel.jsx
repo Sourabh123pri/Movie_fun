@@ -24,7 +24,7 @@ const Carousel = ({storeId}) => {
           {castes.map((cast) => {
             return (
               <div className="carousel-item active"  key={cast.id}>
-                <img style={{width: "10vw",margin: "5px",borderRadius: "12px",}}
+                <img className="carouselImg" 
                   title={cast.name}
                   src={
                     cast.profile_path === null
@@ -33,9 +33,7 @@ const Carousel = ({storeId}) => {
                   }
                   alt={cast.name}
                 />
-                <div className="carousel-caption py-0 d-none d-md-block">
                 <p className="text-center" style={{marginBottom:'0px'}}>{cast.name}</p>
-                </div>
               </div>
             );
           })}

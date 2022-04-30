@@ -47,10 +47,10 @@ const SingleMovieDetials = ({ storeId }) => {
                 {" "}
                 <b> {singleMovie.original_title || singleMovie.title}</b>
               </h3>
-              <p>
+              <div className="overview">
                 Overview :-{" "}
                 <span className="text-muted"> {singleMovie.overview}</span>
-              </p>
+              </div>
               <div>
                 Making cost :- {singleMovie.budget && singleMovie.budget}
                 <i className="fa fa-inr" aria-hidden="true"></i>

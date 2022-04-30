@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100;1,500&family=Rubik+Wet+Paint&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik+Wet+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik+Wet+Paint&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover{
+a:hover {
   color: white;
   text-decoration: none;
 }
@@ -175,7 +175,7 @@ a {
 
 /* ---------------------------------single_movie_detials */
 .single_movie_detials a {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: black;
 }
 .single_movie_detials {
@@ -189,14 +189,29 @@ a {
 .single_movie_info h3 {
   margin: 0.5rem;
 }
-.single_movie_info p {
+.single_movie_info .overview {
   margin-bottom: 0rem;
   font-weight: 600;
+  padding: 5px;
+  background-color: #00000012;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 6px;
 }
 
 .single_img_section img {
   width: 77vw;
   border-radius: 12px;
+}
+.carouselImg {
+  width: 30vh;
+  height: 245px;
+  margin: 3px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 6px;
 }
 /* ------------------------------------- utility  */
 
@@ -215,8 +230,8 @@ a {
 
 /* -------------------------------- Footer  */
 .footer {
-  position: relative;
-  bottom: 0;
+  position: static;
+  bottom: 0px;
   background: #353434;
   color: white;
   display: flex;
@@ -248,7 +263,7 @@ a {
 }
 /*--------------------------------- loader  */
 #loader {
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1000;
@@ -296,6 +311,9 @@ a {
   .single_movie_detials {
     width: 90%;
   }
+  .carouselImg{
+    height: 185px;
+  }
   .pagination {
     width: 100% !important;
     display: flex;
@@ -315,17 +333,28 @@ a {
     padding: 1rem 0;
   }
   .card_group .card {
-    width: 45%;
-    padding: 12px 8px;
+    width: 49%;
+    padding: 6px 6px;
     font-size: 15px;
   }
-  .card_group .card h3 {
-    font-size: 22px;
+  .card_group .card img {
+    height: 55vh;
+  }
+  .card_group .card h3,
+  .movie_info h5 {
+    font-size: 18px;
   }
   .heading .trending_movies {
     font-size: 2rem;
     padding-top: 1rem;
     width: 90vw;
+  }
+  .catetgory {
+    width: 90%;
+    margin: 0.2rem auto;
+  }
+  .catetgory span {
+    margin: 3px 4px;
   }
   .inputBox input {
     width: 44vw;
@@ -337,6 +366,10 @@ a {
     width: 100% !important;
     display: flex;
     flex-wrap: wrap;
+  }
+  .carouselImg {
+    width:18vh;
+    height: 138px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -377,6 +410,9 @@ a {
   }
   .single_movie_info p {
     font-size: 12px;
+  }
+  .carouselImg {
+    height: 138px;
   }
   .pagination {
     width: 100% !important;
