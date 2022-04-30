@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
 
 const SingleMovieDetials = ({ storeId }) => {
   const navigate = useNavigate();
@@ -120,6 +121,7 @@ const SingleMovieDetials = ({ storeId }) => {
             </div>
           </div>
         </a>
+        <Carousel storeId={storeId} />
         <div className="text-center">
           <button
             type="button"

@@ -3,6 +3,7 @@ import axios from "axios";
 import SinglePage from "../content/SinglePage";
 import Genres from "../content/Genres";
 import Search from "../content/Search";
+import Carousel from "../content/Carousel";
 const Home = ({ setStoreId, inputValue }) => {
   const [movies, setMovies] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -76,6 +77,7 @@ const Home = ({ setStoreId, inputValue }) => {
           )}
         </div>
       </div>
+      <Carousel/>
     </>
   );
 };
